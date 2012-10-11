@@ -34,6 +34,8 @@ class CountersResource(ModelResource):
         counter = Counter.objects.get(pk=kwargs['pk'])
         counter.increment()
         counter.save()
+        logger.info("Incremented counter '{0}' ({1}).".
+                    format(counter.name, counter.count))
 
     def deserialize(self, request, data, format='application/json'):
         if request.method == 'PATCH':

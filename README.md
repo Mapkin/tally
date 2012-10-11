@@ -10,4 +10,4 @@ Installation
     $ source /www/tally/bin/activate
     $ git clone git@github.com:Mapkin/tally.git
     $ cd tally
-    $ ./setup.py
+    $ pip install -e .
